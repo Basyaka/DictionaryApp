@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName=".Category" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dictionary" inverseName="parentCategory" inverseEntity="Dictionary"/>
+    </entity>
+    <entity name="Dictionary" representedClassName=".Dictionary" syncable="YES" codeGenerationType="class">
+        <attribute name="dict" attributeType="String"/>
+        <attribute name="transcription" attributeType="String"/>
+        <attribute name="translate" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-253.02734375" positionY="-34.37109375" width="128" height="73"/>
+        <element name="Dictionary" positionX="-63" positionY="-18" width="128" height="103"/>
+    </elements>
+</model>
